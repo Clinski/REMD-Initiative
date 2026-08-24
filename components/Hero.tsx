@@ -27,8 +27,8 @@ export default function Hero() {
           <a href="#partnership" className="px-6 py-3 rounded-full bg-white text-forest-900 font-semibold hover:bg-sand-50 transition shadow-lg shadow-black/20">
             Partner With Us →
           </a>
-          <a href="#solution" className="px-6 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition">
-            See What We Build
+          <a href="#about" className="px-6 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition">
+            See What We&apos;re About
           </a>
         </div>
       </div>

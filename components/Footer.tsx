@@ -1,5 +1,11 @@
 export default function Footer() {
-  const links = ["About", "Solution", "Partnership", "How It Works", "Get Involved"];
+  const links = [
+    { label: "About", id: "about" },
+    { label: "Solution", id: "solution" },
+    { label: "Partnership", id: "partnership" },
+    { label: "How It Works", id: "how" },
+    { label: "Get Involved", id: "involved" },
+  ];
   return (
     <footer className="bg-forest-950 text-white/70 px-6 md:px-12 lg:px-20 py-14">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
@@ -14,8 +20,8 @@ export default function Footer() {
           <h4 className="font-semibold text-white mb-3 text-sm">Quick Links</h4>
           <ul className="space-y-2 text-sm">
             {links.map((l) => (
-              <li key={l}>
-                <a href={`#${l.toLowerCase().replace(/ /g, "")}`} className="hover:text-white transition">{l}</a>
+              <li key={l.id}>
+                <a href={`#${l.id}`} className="hover:text-white transition">{l.label}</a>
               </li>
             ))}
           </ul>

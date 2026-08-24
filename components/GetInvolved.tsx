@@ -30,7 +30,12 @@ export default function GetInvolved() {
               Help run workshops, organize community cleanups, or create content. Roles for every
               skill set and schedule.
             </p>
-            <a href="#contact" className="mt-6 inline-flex px-5 py-2.5 rounded-full bg-forest-700 text-white font-semibold hover:bg-forest-800 transition">
+            <a
+              href="https://docs.google.com/forms/d/1iDToXVf5FVuzK0jM8HuYxymxxAnYB6jsPhfJbHuAppM/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex px-5 py-2.5 rounded-full bg-forest-700 text-white font-semibold hover:bg-forest-800 transition"
+            >
               Get Started →
             </a>
           </div>
