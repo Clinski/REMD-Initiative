@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const links = [
   { href: "#about", label: "About" },
   { href: "#solution", label: "Solution" },
@@ -12,7 +14,7 @@ export default function Nav() {
     <header className="absolute top-0 inset-x-0 z-50">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 pt-9 pb-5 text-white">
         <a href="#" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="w-7 h-7 rounded-md bg-white/15 border border-white/20 flex items-center justify-center text-xs">R</span>
+          <Image src="/logo-icon.png" alt="" width={28} height={28} className="w-7 h-7" />
           REMD Initiative
         </a>
         <ul className="hidden lg:flex items-center gap-7 text-sm text-white/80">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   const links = [
     { label: "About", id: "about" },
@@ -11,7 +13,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-2 font-semibold text-white">
-            <span className="w-8 h-8 rounded-md bg-white/10 border border-white/20 flex items-center justify-center text-xs">R</span>
+            <Image src="/logo-icon.png" alt="" width={32} height={32} className="w-8 h-8" />
             REMD <span className="italic font-serif text-forest-200">Initiative</span>
           </div>
           <p className="mt-3 text-sm">Youth, education, sustainability, and creative learning.</p>
