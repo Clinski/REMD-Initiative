@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import StoryVideo from "@/components/StoryVideo";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
 import Partnership from "@/components/Partnership";
@@ -16,6 +17,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <About />
+      <StoryVideo />
       <Problem />
       <Solution />
       <Partnership />
