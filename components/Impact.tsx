@@ -10,7 +10,7 @@ const dimensions = [
 
 export default function Impact() {
   return (
-    <section className="section-pad bg-forest-700 text-white relative overflow-hidden">
+    <section className="section-pad bg-forest-700 text-white relative overflow-hidden isolate [contain:paint]">
       <div className="absolute inset-0 opacity-40 bg-dot-grid" style={{ backgroundSize: "22px 22px" }} />
       <div className="relative max-w-6xl mx-auto">
         <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">

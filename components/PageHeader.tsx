@@ -8,7 +8,7 @@ export default function PageHeader({
   children?: React.ReactNode;
 }) {
   return (
-    <section className="relative bg-forest-900 text-white overflow-hidden">
+    <section className="relative bg-forest-900 text-white overflow-hidden isolate [contain:paint]">
       <div className="absolute inset-0 opacity-60 bg-dot-grid" style={{ backgroundSize: "22px 22px" }} />
       <div className="absolute -top-40 -right-40 w-[480px] h-[480px] rounded-full bg-forest-700/50 blur-3xl" />
       <div className="relative max-w-4xl mx-auto px-6 md:px-12 pt-36 pb-20 text-center">

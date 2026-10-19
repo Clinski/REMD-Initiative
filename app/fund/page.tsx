@@ -20,15 +20,15 @@ export default function FundPage() {
       </PageHeader>
 
       <section className="section-pad">
-        <div className="max-w-3xl mx-auto grid gap-6">
+        <div className="max-w-3xl mx-auto grid gap-6 [&>*]:min-w-0">
           {fund.showAccountPublicly ? (
-            <div className="rounded-3xl bg-forest-800 text-white p-8 md:p-10 relative overflow-hidden">
+            <div className="rounded-3xl bg-forest-800 text-white p-6 sm:p-8 md:p-10 relative overflow-hidden">
               <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-forest-600/40 blur-3xl" />
               <div className="relative">
                 <p className="eyebrow-light">Bank transfer</p>
                 <p className="mt-4 text-lg font-semibold">{fund.bank}</p>
                 <div className="mt-2 flex flex-wrap items-center gap-4">
-                  <p className="text-3xl md:text-4xl font-bold tracking-[0.2em]">{fund.accountNumber}</p>
+                  <p className="text-2xl min-[380px]:text-3xl md:text-4xl font-bold tracking-[0.1em] min-[380px]:tracking-[0.16em] md:tracking-[0.2em]">{fund.accountNumber}</p>
                   <CopyButton text={fund.accountNumber} label="Copy number" />
                 </div>
                 <p className="mt-3 text-white/75 tracking-wide">{fund.accountName}</p>
@@ -36,14 +36,14 @@ export default function FundPage() {
               </div>
             </div>
           ) : (
-            <div className="rounded-3xl bg-forest-800 text-white p-8 md:p-10">
+            <div className="rounded-3xl bg-forest-800 text-white p-6 sm:p-8 md:p-10">
               <p className="eyebrow-light">Sponsor by bank transfer</p>
               <p className="mt-4 text-white/80">Email us and we will send the account details and confirm your sponsorship.</p>
               <a href={sponsorMail} className="btn-light mt-6">Email us to sponsor →</a>
             </div>
           )}
 
-          <div className="rounded-3xl bg-white border border-forest-100 p-8">
+          <div className="rounded-3xl bg-white border border-forest-100 p-6 sm:p-8">
             <h2 className="text-2xl font-bold text-forest-900">What your sponsorship supports</h2>
             <ul className="mt-4 grid gap-3 text-ink/75">
               <li className="flex gap-3"><span className="text-forest-500">✓</span>Interactive climate education in schools across Lagos</li>
@@ -52,9 +52,9 @@ export default function FundPage() {
             </ul>
           </div>
 
-          <div className="rounded-3xl bg-forest-50 border border-forest-100 p-8">
+          <div className="rounded-3xl bg-forest-50 border border-forest-100 p-6 sm:p-8">
             <h2 className="text-xl font-bold text-forest-900">Enquiries &amp; sponsorship</h2>
-            <p className="mt-3 text-ink/75">
+            <p className="mt-3 text-ink/75 break-words">
               Email <a href={`mailto:${site.email}`} className="underline text-forest-700">{site.email}</a>
               {fund.showContactPhonesPublicly && (
                 <> or call {fund.contacts.map((c, i) => (<span key={c.name}>{i > 0 && " · "}{c.name}: <a href={`tel:${c.phone.replace(/\s/g, "")}`} className="underline text-forest-700 whitespace-nowrap">{c.phone}</a></span>))}</>

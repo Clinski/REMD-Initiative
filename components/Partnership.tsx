@@ -8,7 +8,7 @@ const tracks = [
 
 export default function Partnership() {
   return (
-    <section id="partnership" className="section-pad bg-forest-900 text-white relative overflow-hidden">
+    <section id="partnership" className="section-pad bg-forest-900 text-white relative overflow-hidden isolate [contain:paint]">
       <Wave flip fill="#faf7f1" className="absolute top-0 inset-x-0 z-[1]" />
       <div className="absolute inset-0 opacity-50 bg-dot-grid" style={{ backgroundSize: "22px 22px" }} />
       <div className="relative max-w-6xl mx-auto">

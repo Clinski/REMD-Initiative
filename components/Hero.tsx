@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative bg-forest-900 text-white overflow-hidden">
+    <section className="relative bg-forest-900 text-white overflow-hidden isolate [contain:paint]">
       <div
         className="absolute inset-0 opacity-60 bg-dot-grid"
         style={{ backgroundSize: "22px 22px" }}
@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-forest-700/50 blur-3xl" />
       <div className="absolute -bottom-32 -left-20 w-[420px] h-[420px] rounded-full bg-forest-600/30 blur-3xl" />
 
-      <div aria-hidden className="absolute top-16 inset-x-0 overflow-hidden h-9 flex items-center border-y border-white/5 text-forest-300/60 text-[11px] tracking-[0.4em] font-semibold whitespace-nowrap select-none">
+      <div aria-hidden className="absolute top-16 inset-x-0 overflow-hidden isolate [contain:paint] h-9 flex items-center border-y border-white/5 text-forest-300/60 text-[11px] tracking-[0.4em] font-semibold whitespace-nowrap select-none">
         <div className="flex w-max animate-marquee">
           {[0, 1].map((i) => (
             <span key={i} className="pr-8">SUSTAINABILITY  ·  YOUTH  ·  EDUCATION  ·  CREATIVE LEARNING  ·  SUSTAINABILITY  ·  YOUTH  ·  EDUCATION  ·  CREATIVE LEARNING  ·  SUSTAINABILITY  ·  YOUTH  ·  EDUCATION  ·  CREATIVE LEARNING  ·</span>

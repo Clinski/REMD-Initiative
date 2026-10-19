@@ -8,7 +8,7 @@ const socialLabels: Record<string, string> = {
 export default function Contact() {
   const socials = Object.entries(site.social).filter(([, url]) => url);
   return (
-    <section id="contact" className="relative bg-forest-900 text-white section-pad overflow-hidden">
+    <section id="contact" className="relative bg-forest-900 text-white section-pad overflow-hidden isolate [contain:paint] -mb-px">
       <Wave flip fill="#faf7f1" className="absolute top-0 inset-x-0 z-[1]" />
       <div className="absolute inset-0 opacity-50 bg-dot-grid" style={{ backgroundSize: "22px 22px" }} />
       <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-forest-700/40 blur-3xl" />

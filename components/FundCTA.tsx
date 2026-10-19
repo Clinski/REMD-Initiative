@@ -5,7 +5,7 @@ import CopyButton from "./CopyButton";
 export default function FundCTA() {
   return (
     <section id="fund" className="section-pad bg-sand-50">
-      <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2rem] bg-forest-800 text-white px-6 py-12 md:px-14 md:py-16">
+      <div className="max-w-6xl mx-auto relative overflow-hidden isolate [contain:paint] rounded-[2rem] bg-forest-800 text-white px-6 py-12 md:px-14 md:py-16">
         <div className="absolute inset-0 opacity-40 bg-dot-grid" style={{ backgroundSize: "22px 22px" }} />
         <div className="absolute -bottom-32 -right-24 w-[420px] h-[420px] rounded-full bg-forest-600/50 blur-3xl" />
 
@@ -26,7 +26,7 @@ export default function FundCTA() {
                 <span className="font-semibold text-forest-100">{fund.bank}</span>
               </div>
               <span aria-hidden className="mt-6 block w-12 h-9 rounded-md bg-gradient-to-br from-amber-300 to-amber-500" />
-              <p className="mt-6 text-3xl sm:text-4xl font-bold tracking-[0.18em]" aria-label={`Account number ${fund.accountNumber}`}>
+              <p className="mt-6 text-2xl min-[380px]:text-3xl sm:text-4xl font-bold tracking-[0.1em] min-[380px]:tracking-[0.14em] sm:tracking-[0.18em]" aria-label={`Account number ${fund.accountNumber}`}>
                 {fund.accountNumber}
               </p>
               <p className="mt-3 text-sm sm:text-base tracking-wide text-white/80">{fund.accountName}</p>
