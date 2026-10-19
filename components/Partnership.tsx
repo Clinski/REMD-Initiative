@@ -1,3 +1,4 @@
+import Wave from "./Wave";
 const tracks = [
   { tag: "Education", title: "Schools and Universities", desc: "Curriculum partnerships, workshop hosts, and youth ambassador programs." },
   { tag: "NGOs", title: "Aligned Missions", desc: "Programs designed with organizations in climate, education, and youth." },
@@ -8,6 +9,7 @@ const tracks = [
 export default function Partnership() {
   return (
     <section id="partnership" className="section-pad bg-forest-900 text-white relative overflow-hidden">
+      <Wave flip fill="#faf7f1" className="absolute top-0 inset-x-0 z-[1]" />
       <div className="absolute inset-0 opacity-50 bg-dot-grid" style={{ backgroundSize: "22px 22px" }} />
       <div className="relative max-w-6xl mx-auto">
         <p className="eyebrow-light mb-4">Partnership Opportunities</p>
@@ -34,7 +36,7 @@ export default function Partnership() {
             <span className="w-10 h-10 rounded-lg bg-white text-forest-900 flex items-center justify-center font-bold">R</span>
             <span className="font-semibold tracking-tight text-lg">REMD <span className="italic font-serif text-forest-200">Initiative</span></span>
           </div>
-          <a href="#contact" className="px-5 py-2.5 rounded-full bg-forest-400 text-forest-900 font-semibold hover:bg-forest-300 transition">
+          <a href="/#contact" className="px-5 py-2.5 rounded-full bg-forest-400 text-forest-900 font-semibold hover:bg-forest-300 transition">
             Start a Conversation →
           </a>
         </div>

@@ -7,22 +7,24 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="section-pad">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto">
+    <section id="how" className="section-pad bg-forest-50">
+      <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl">
           <p className="eyebrow mb-4">How It Works</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-earth-900">A four-step engagement model.</h2>
+          <h2 className="h-display text-forest-900">
+            A four-step <span className="italic font-serif text-forest-600">engagement model.</span>
+          </h2>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <ol className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {steps.map((s) => (
-            <div key={s.n} className="relative p-6 rounded-2xl bg-white border border-leaf-100">
-              <div className="text-5xl font-bold text-leaf-200">{s.n}</div>
-              <h3 className="mt-3 font-bold text-xl text-earth-900">{s.title}</h3>
-              <p className="mt-2 text-earth-800/70 text-sm">{s.desc}</p>
-            </div>
+            <li key={s.n} className="relative p-7 rounded-2xl bg-white border border-forest-100 hover:border-forest-300 transition">
+              <div className="text-5xl font-bold text-forest-200">{s.n}</div>
+              <h3 className="mt-3 font-bold text-xl text-forest-900">{s.title}</h3>
+              <p className="mt-2 text-ink/65 text-sm leading-relaxed">{s.desc}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

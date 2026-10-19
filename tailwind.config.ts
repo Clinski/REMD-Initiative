@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -26,13 +26,16 @@ export default {
         ink: "#0a1f17",
       },
       fontFamily: {
-        sans: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
-        serif: ["ui-serif", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        serif: ["var(--font-playfair)", "ui-serif", "Georgia", "serif"],
       },
       backgroundImage: {
-        "dot-grid":
-          "radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)",
+        "dot-grid": "radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)",
       },
+      keyframes: {
+        marquee: { from: { transform: "translateX(0)" }, to: { transform: "translateX(-50%)" } },
+      },
+      animation: { marquee: "marquee 45s linear infinite" },
     },
   },
   plugins: [],

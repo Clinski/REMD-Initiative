@@ -1,6 +1,8 @@
+import Wave from "./Wave";
 export default function StoryVideo() {
   return (
-    <section id="story" className="section-pad bg-forest-950">
+    <section id="story" className="section-pad bg-forest-950 relative">
+      <Wave flip fill="#faf7f1" className="absolute top-0 inset-x-0 z-[1]" />
       <div className="max-w-5xl mx-auto text-center">
         <p className="eyebrow-light mb-4">Our Story</p>
         <h2 className="h-display text-white max-w-3xl mx-auto">
@@ -16,13 +18,14 @@ export default function StoryVideo() {
             className="w-full aspect-video bg-black"
             controls
             playsInline
-            preload="metadata"
+            preload="none"
             poster="/videos/remd-story-poster.jpg"
           >
             <source src="/videos/remd-story.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
+      <Wave fill="#f1f7f3" className="absolute bottom-0 inset-x-0 z-[1]" />
     </section>
   );
 }

@@ -17,8 +17,8 @@ export default function GetInvolved() {
                 A mentorship program for young leaders ready to design and run sustainability
                 projects in their communities.
               </p>
-              <a href="#contact" className="mt-6 inline-flex px-5 py-2.5 rounded-full bg-white text-forest-900 font-semibold hover:bg-sand-50 transition">
-                Apply →
+              <a href="/fellowship" className="mt-6 inline-flex px-5 py-2.5 rounded-full bg-white text-forest-900 font-semibold hover:bg-sand-50 transition">
+                Learn more &amp; apply →
               </a>
             </div>
           </div>
