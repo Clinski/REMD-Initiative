@@ -8,9 +8,19 @@ import { navLinks } from "@/lib/content";
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
+  // Hide the bar while scrolling down, bring it back as soon as the visitor scrolls up (or is near the top).
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      if (y < 80) setHidden(false);
+      else if (y > last + 6) setHidden(true);
+      else if (y < last - 6) setHidden(false);
+      last = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -29,9 +39,10 @@ export default function Nav() {
   return (
     <>
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
+      onFocusCapture={() => setHidden(false)}
+      className={`fixed top-0 inset-x-0 z-50 transition-[transform,background-color] duration-300 motion-reduce:transition-none ${
         scrolled || open ? "bg-forest-900/90 backdrop-blur border-b border-white/10" : "bg-transparent"
-      }`}
+      } ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}
     >
       <nav aria-label="Main" className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 h-16 text-white">
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight" onClick={() => setOpen(false)}>
